@@ -1,0 +1,512 @@
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #fff;
+  height: 3000px;
+}
+
+html {
+  font-size: 15px;
+}
+
+li {
+  list-style: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* header */
+
+#header {
+  width: 100%;
+  /*  height: 50rem; */
+  background: url(../images/berlin.jpg) no-repeat;
+  background-size: 100% 100%;
+}
+
+#header #cover {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.myphoto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* xs */
+
+@media screen and (max-width: 576px) {
+  .myphoto img {
+    width: 50%;
+  }
+  section#letter > div#cover {
+    display: none;
+  }
+}
+
+/* sm */
+
+@media screen and (min-width: 576px) {
+  section#header,
+  section#header > div#cover {
+    height: 55rem;
+  }
+  .myphoto img {
+    width: 50%;
+  }
+  section#letter > div#cover {
+    height: 85rem;
+  }
+}
+
+/* md */
+
+@media screen and (min-width: 768px) {
+  section#header,
+  section#header > div#cover {
+    height: 45rem;
+  }
+  section#letter > div#cover {
+    height: 73rem;
+  }
+  .myphoto img {
+    width: 100%;
+  }
+}
+
+/* lg */
+
+@media screen and (min-width: 992px) {
+  section#header,
+  section#header > div#cover {
+    height: 41rem;
+  }
+  section#letter > div#cover {
+    height: 66rem;
+  }
+  .myphoto img {
+    width: 60%;
+  }
+}
+
+.navigator {
+  text-align: center;
+  color: #fff;
+}
+
+.navigator #sArrow {
+  font-size: 12px;
+}
+
+.navigator #mArrow {
+  font-size: 24px;
+}
+
+.navigator #lArrow {
+  font-size: 36px;
+}
+
+.navigator #sArrow,
+.navigator #mArrow {
+  margin-bottom: 5px;
+}
+
+.navigator #letter {
+  font-size: 22px;
+}
+
+/* letter */
+
+#letter {
+  width: 100%;
+  min-height: 1px;
+  background: url(../images/bg_letter.jpg) no-repeat;
+  background-size: 100% 100%;
+  display: none;
+}
+
+#letter #cover {
+  width: 100%;
+  height: 75rem;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+#letter .letter {
+  padding: 30px;
+  min-height: 1px;
+  border-radius: 14px;
+  box-shadow: 0 0 8px 2px #dadada;
+}
+
+.letter h4,
+.letter p,
+.letter ul {
+  margin: 10px 0;
+  color: #f8f8f8;
+}
+
+.letter ul li i {
+  margin-top: 2px;
+  font-size: 7px;
+}
+
+/* skills */
+
+#skills h3,
+#experience h3,
+#tools h3 {
+  color: rgba(0, 0, 0, 0.5);
+  height: 40px;
+  line-height: 40px;
+}
+
+.tools_li {
+  display: block;
+  float: left;
+  padding: 12px;
+  text-align: center;
+}
+
+.row-head .ul-line {
+  width: 100%;
+  height: 1px;
+  background: #dadada;
+  color: #dadada;
+  margin-bottom: 30px;
+}
+
+.row-head span {
+  display: block;
+  width: 100px;
+  height: 3px;
+  background-color: rgb(0, 128, 128);
+}
+
+.skill .icon {
+  cursor: pointer;
+  width: 87px;
+  height: 100px;
+  transition: all 0.3s;
+}
+
+#icon_html {
+  background: url("../images/html.png") no-repeat 50%;
+}
+
+#icon_css {
+  background: url("../images/css.png") no-repeat 50%;
+}
+
+#icon_js {
+  background: url("../images/js.png") no-repeat 50%;
+}
+
+.current {
+  transform: scale(1.2);
+}
+
+.skill_name::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-bottom: 10px solid black;
+  position: relative;
+  margin: 0 auto;
+  display: block;
+  -webkit-transition: all linear 0.3s;
+  -moz-transition: all linear 0.3s;
+  -ms-transition: all linear 0.3s;
+  -o-transition: all linear 0.3s;
+  transition: all linear 0.3s;
+}
+
+.skill_name.special::after {
+  transform: rotateZ(180deg);
+}
+
+div.skill_desc {
+  position: relative;
+  display: block;
+  width: 100%;
+  min-height: 20px;
+  display: none;
+}
+
+div.skill_desc:before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  border-right: 2px solid #555;
+  border-bottom: 2px solid #555;
+  position: absolute;
+  top: -7px;
+  left: 48%;
+  display: block;
+  -webkit-transition: all linear 0.3s;
+  -moz-transition: all linear 0.3s;
+  -ms-transition: all linear 0.3s;
+  -o-transition: all linear 0.3s;
+  transform: rotateZ(225deg);
+  background-color: #fff;
+}
+
+div.skill_desc ul {
+  color: rgb(0, 128, 128);
+  padding: 10px;
+  font-size: 12px !important;
+  line-height: 18px;
+  text-align: left;
+  border: 2px solid #555;
+  border-radius: 10px;
+}
+
+div.skill_desc ul li:before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f111";
+  padding-right: 13px;
+  vertical-align: middle;
+  font-weight: 900;
+  font-size: 5px;
+}
+
+div.experience ul li:before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f111";
+  padding-right: 13px;
+  vertical-align: middle;
+  font-weight: 900;
+  font-size: 5px;
+}
+
+/* tools */
+
+.tool {
+  margin: 10px 0;
+}
+
+/* experience */
+
+#experience .experience {
+  border: 1px solid #dadada;
+  margin: 10px 5px;
+  padding: 15px;
+  height: 100%;
+}
+
+#experience .experience:hover {
+  margin-top: 0px;
+  box-shadow: 0 0 20px 2px #dadada;
+  transition: all 0.5s;
+}
+
+#experience .experience li i {
+  margin-right: 10px;
+}
+
+#experience .experience h5 {
+  border-bottom: 1px solid #dadada;
+}
+
+#experience .experience li {
+  width: 100%;
+  display: inline-block;
+  height: auto;
+  line-height: 20px;
+  word-break: keep-all;
+  word-wrap: break-word;
+}
+
+/* project */
+
+#project {
+  width: 100%;
+  min-height: 20rem;
+  background: url(../images/bg_project.png);
+  margin-top: 40px;
+  padding: 20px;
+}
+
+#project h3 {
+  color: #dadada;
+  height: 40px;
+  line-height: 40px;
+}
+
+.row.item-wrapper {
+  margin-top: 20px !important;
+  min-height: 1px;
+}
+
+.row.item-wrapper div {
+  position: relative;
+  padding: 0;
+  overflow: hidden;
+}
+
+.item figure {
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+}
+
+.row.item-wrapper img {
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  transition: all 5s;
+}
+
+figcaption {
+  position: absolute;
+  left: 0;
+  padding: 20px;
+  background: #2c3f52;
+  height: 100%;
+  width: 100%;
+  top: 100%;
+  bottom: 0;
+  opacity: 0.7;
+  transition: all 0.7s;
+}
+
+.move {
+  transform: translateY(-100%);
+}
+
+.scale {
+  transform: scale(1.3);
+}
+
+.item figcaption .ul-center {
+  width: 100%;
+}
+
+.item figcaption h3 {
+  position: absolute;
+  display: block;
+  color: #dadada;
+  height: 40px;
+  line-height: 40px;
+  top: 40px;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+span.move {
+  transform: translateY(-250px);
+}
+
+/* contact */
+
+section#contact {
+  width: 100%;
+  height: 30rem;
+  background: url(../images/bg_contact.jpg) no-repeat;
+  background-size: 100% 100%;
+  background-color: black 0.5;
+}
+
+#contact .wrapper {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(10, 10, 10, 0.9);
+}
+
+.contact span {
+  display: block;
+  width: 150px;
+  height: 3px;
+  background-color: rgb(0, 128, 128);
+  margin: 10px auto !important;
+}
+
+/* footer */
+
+section#footer {
+  width: 100%;
+  height: 8rem;
+}
+
+#footer .wrapper {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-color: rgba(10, 10, 10);
+  padding-top: 30px;
+}
+
+#footer div,
+#footer h6 {
+  width: 100%;
+  height: 20px;
+  display: block;
+  color: #dadada;
+}
+
+#footer .ul-center {
+  position: relative;
+  width: 60%;
+  margin-left: 20%;
+  height: 1px;
+  background-color: #dadada;
+  border: 1px solid #dadada;
+}
+
+#footer .ul-center span {
+  display: inline-block;
+  position: absolute;
+  top: -10px;
+  width: 50px;
+  height: 20px;
+  transform: translateX(-50%);
+  padding: 0 20px;
+  background-color: rgba(10, 10, 10);
+  color: #dadada;
+}
+
+#footer .ul-center .links {
+  width: 60%;
+  margin-left: 20%;
+  height: 37px;
+  line-height: 41px;
+  margin-top: 30px !important;
+}
+
+#footer .links a {
+  width: 20px;
+  height: 20px;
+  color: #dadada !important;
+  text-decoration: none;
+}
+
+#footer .goTop {
+  display: block;
+  right: 5%;
+  bottom: 5%;
+  width: 44px;
+  height: 44px;
+  position: fixed;
+  font-size: 40px;
+  color: #dadada;
+  border-radius: 50%;
+  display: none;
+}
+
+/* navbar */
+
+nav.navbar {
+  box-shadow: 0px 0px 20px #555;
+}
+
+.active {
+  background-color: #555;
+  color: #dadada !important;
+}
