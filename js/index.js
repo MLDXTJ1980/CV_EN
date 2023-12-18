@@ -55,21 +55,7 @@ $(function () {
     },
   })
 
-  //click one of the skills icon to show/hide the descrption
-  var flag
-  $(".skill .icon").click(function () {
-    var index = $(this).parent().index()
-    var arr = $(".skill_list .skill")
-    for (var i = 0; i < arr.length; i++) {
-      arr.eq(i).find(".icon").removeClass("current")
-      arr.eq(i).find(".skill_name").removeClass("special")
-      arr.eq(i).find(".skill_desc").stop().fadeOut()
-    }
-
-    $(".skill_list .skill").eq(index).find(".icon").addClass("current")
-    $(".skill_list .skill").eq(index).find(".skill_name").addClass("special")
-    $(".skill_list .skill").eq(index).find(".skill_desc").stop().fadeToggle()
-  })
+  
 
   // highlight the project on mouseover
   $(".item-wrapper .item").mouseover(function () {

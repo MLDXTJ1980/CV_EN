@@ -4,6 +4,12 @@ body {
   height: 3000px;
 }
 
+.btn:focus{
+  box-shadow: none;
+}
+
+
+
 html {
   font-size: 15px;
 }
